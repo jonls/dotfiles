@@ -29,7 +29,7 @@
 ;; color theme
 (require 'color-theme)
 (color-theme-initialize)
-(color-theme-robin-hood)
+(color-theme-comidia)
 
 ;; utf-8
 (setq locale-coding-system 'utf-8)
