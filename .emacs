@@ -3,6 +3,7 @@
 (setq load-path (cons "~/.emacs.d/lisp" load-path))
 
 ;; keys
+(require 'iso-transl)
 (define-key global-map [delete] 'delete-char)
 (define-key global-map [f12] 'compile)
 (fset 'yes-or-no-p 'y-or-n-p)
