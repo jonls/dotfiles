@@ -170,3 +170,7 @@
 (require 'package)
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
 (put 'upcase-region 'disabled nil)
+
+;; setup external web browser
+(setq browse-url-browser-function 'browse-url-generic
+      browse-url-generic-program "xdg-open")
