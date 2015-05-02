@@ -3,7 +3,6 @@
 (setq load-path (cons "~/.emacs.d/lisp" load-path))
 
 ;; keys
-(require 'iso-transl)
 (define-key global-map [delete] 'delete-char)
 (define-key global-map [f12] 'compile)
 (fset 'yes-or-no-p 'y-or-n-p)
@@ -151,26 +150,12 @@
 (setq auto-mode-alist (cons '("\\.ebuild\\'" . ebuild-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("\\.eclass\\'" . ebuild-mode) auto-mode-alist))
 
-;; php
-(load-library "php-mode.el")
-(add-hook 'php-mode-hook
-	  (lambda ()
-	    (setq tab-width 4)
-	    (setq c-basic-offset 4)
-	    (setq indent-tabs-mode nil)))
 
-
+(put 'upcase-region 'disabled nil)
 (put 'downcase-region 'disabled nil)
 
 
-;; load zeitgeist plugin
-(load-library "zeitgeist.elc")
-
 ;; add marmalade package repository
 (require 'package)
-(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
-(put 'upcase-region 'disabled nil)
-
-;; setup external web browser
-(setq browse-url-browser-function 'browse-url-generic
-      browse-url-generic-program "xdg-open")
+(add-to-list 'package-archives
+	     '("marmalade" . "http://marmalade-repo.org/packages/"))
