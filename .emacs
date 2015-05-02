@@ -32,9 +32,8 @@
 (setq font-lock-maximum-decoration t)
 
 ;; color theme
-(require 'color-theme)
-(color-theme-initialize)
-(color-theme-comidia)
+(package-initialize)
+(load-theme 'solarized-dark t)
 
 ;; utf-8
 (setq locale-coding-system 'utf-8)
