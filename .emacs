@@ -69,7 +69,7 @@
 
 ;; no menu bar
 (menu-bar-mode -1)
-(tool-bar-mode -1)
+(if (functionp 'tool-bar-mode) (tool-bar-mode -1))
 
 ;; line numbers
 (global-linum-mode 1)
