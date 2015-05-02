@@ -78,7 +78,6 @@
 (setq show-paren-style 'expression)
 
 ;; text
-(add-hook 'text-mode-hook 'auto-fill-mode)
 (set-fill-column 79)
 
 ;; c
