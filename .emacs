@@ -7,6 +7,11 @@
 (define-key global-map [f12] 'compile)
 (fset 'yes-or-no-p 'y-or-n-p)
 
+;; osx keys
+(when (eq system-type 'darwin)
+  (setq mac-option-key-is-meta t)
+  (setq mac-right-option-modifier nil))
+
 ;; control scrolling
 (setq scroll-step 0)
 (setq scroll-preserve-screen-position t)
