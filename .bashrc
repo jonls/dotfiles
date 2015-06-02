@@ -12,6 +12,9 @@ shopt -s checkwinsize
 # Set git prompt if available
 GIT_PROMPT_START="\[$(tput setaf 4)\]\w\[\$(tput sgr0)\]"
 GIT_PROMPT_END=" → "
+if [ -n "$SSH_CONNECTION" ]; then
+	GIT_PROMPT_START="\[$(tput setaf 1)\]\h\[$(tput sgr0)\]:$GIT_PROMPT_START"
+fi
 if [ -d ~/.bash-git-prompt ]; then
 	source ~/.bash-git-prompt/gitprompt.sh
 else
