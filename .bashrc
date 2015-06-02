@@ -31,3 +31,8 @@ alias egrep='egrep --color=auto'
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+
+# Interactive (ask to overwrite) aliases
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
