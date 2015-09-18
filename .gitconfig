@@ -15,6 +15,7 @@
 	ci = commit
 	br = branch
 	co = checkout
+	ff = merge --ff --ff-only
 	df = diff
 	dc = diff --cached
 	lg = log -p
@@ -26,3 +27,5 @@
 	ign = ls-files -o -i --exclude-standard
 [push]
 	default = simple
+[merge]
+	ff = false
